@@ -17,6 +17,13 @@ class ActivityCreate(SQLModel):
     start_date: datetime
 
 
+class ActivityUpdate(SQLModel):
+    name: Optional[str] = None
+    description: Optional[str] = None
+    start_date: Optional[datetime] = None
+    end_date: Optional[datetime] = None
+
+
 class ActivityRead(SQLModel):
     id: int
     name: str
